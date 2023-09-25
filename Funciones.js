@@ -10,8 +10,7 @@ function manejadorClick() {
 }
 
 function manejadorImprimir() {
-
-
+    // todo: esto se debe de meter algo de código puedo copiarlo del ejer de hoy de clase;
 }
 
 function esNumero(entrada) {
