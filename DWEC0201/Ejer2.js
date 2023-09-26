@@ -11,6 +11,7 @@ function principal() {
 
 let salida = 0;
 
+
 function btnSuma() {
     let entrada1 = document.getElementById("entrada1").value;
     let entrada2 = document.getElementById("entrada2").value;
