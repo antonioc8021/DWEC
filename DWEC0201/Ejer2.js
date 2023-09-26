@@ -6,7 +6,7 @@ function principal() {
     document.getElementById("btnMultiplicar").onclick = btnMultiplicar;
     document.getElementById("btnDividir").onclick = btnDividir;
     document.getElementById("btnFactorial").onclick = btnFactorial;
-    document.getElementById("btnSumatorio").onclick = btnSuma;
+    document.getElementById("btnSumatorio").onclick = btnSumatorio;
 }
 
 let salida = 0;
@@ -88,14 +88,15 @@ function factorial(numero) {
 }
 
 function sumatorio(numero) {
+    let res = 0;
     if (numero === 0) {
-        let res = 0;
+        res = 0;
     }
     else {
-        let res = 1;
-        for (let i = numero; i > 0; i--) {
-            res += + i;
+        let res = 0;
+        for (let i = 1; i <= numero; i++) {
+            res += i;
         }
+        return res;
     }
-    return res;
 }
