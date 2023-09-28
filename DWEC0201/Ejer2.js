@@ -146,3 +146,6 @@ function esEntero(numero) {
 function esPositivo(numero) {
     return numero > 0;
 }
+
+
+toString
