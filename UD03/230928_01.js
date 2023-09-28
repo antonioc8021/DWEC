@@ -14,5 +14,5 @@ function manejadorClick() {
 }
 
 function inactive() {
-    document.getElementById("salida").innerHTML = "Estás afk";
+    document.getElementById("salida").innerHTML = "Estás afk, se cerrará en 3 segundos";
 }
