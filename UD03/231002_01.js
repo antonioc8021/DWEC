@@ -1,1 +1,0 @@
-//ejercicio planteado en clase, enseña cosas del dom , del estilo de: getelementbyID y mierdas varias
