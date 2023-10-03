@@ -79,3 +79,16 @@ function enRango(numero, minimo, maximo) {
 function esDivisible(dividendo, divisor) {
     return (dividendo % divisor === 0);
 }
+
+function esPrimo(numero) {
+    let resultado = true;
+    if (numero - parseInt(numero) !== 0) {
+        resultado = false;
+    }
+    for (let i = 2; (i < numero) && resultado; i++) {
+        if (numero % i === 0) {
+            resultado = false;
+        }
+    }
+    return resultado;
+}
