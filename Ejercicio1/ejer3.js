@@ -5,7 +5,7 @@
 window.onload = principal;
 
 function principal() {
-    console.log(tiempoVacaciones(new Date("2024-01-01")));
+    actualizarWeb();
 }
 
 function tiempoVacaciones(fechaFin) {
@@ -25,5 +25,11 @@ function tiempoVacaciones(fechaFin) {
     let dias = (msTotales - horas) / 24;
 
     return dias + " días, " + horas + " horas, " + minutos + " minutos, " + segundos + " segundos";
+}
 
+
+function actualizarWeb() {
+    let fechaFin = new Date("2024-01-01");
+    let frasesVacaciones = tiempoVacaciones(fechaFin);
+    document.getElementById("divVacaciones").innerHTML = frasesVacaciones;
 }
