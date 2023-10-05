@@ -15,3 +15,4 @@ function aleatrorio(numero) {
         decimosComprados
     }
 }
+
