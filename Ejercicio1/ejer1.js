@@ -4,6 +4,9 @@
 window.onload = principal;
 
 function principal() {
-
+    console.log("Hola mundo");
 }
 
+function tiempoVacaciones() {
+
+}
