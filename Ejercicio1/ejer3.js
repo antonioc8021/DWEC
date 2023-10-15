@@ -44,7 +44,7 @@ function tiempoVacaciones(fechaFin) {
 
 
 function actualizarReloj() {
-    let fechaFin = new Date("2024-01-01");
+    let fechaFin = new Date("2024-06-25");
     let frasesVacaciones = tiempoVacaciones(fechaFin);
     document.getElementById("divVacaciones").innerHTML = frasesVacaciones;
 }
