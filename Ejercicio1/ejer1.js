@@ -4,10 +4,23 @@
 window.onload = principal;
 
 function principal() {
-    document.getElementById("miBoton").onclick = manejadorClick;
+    document.getElementById("boton").onclick = manejadorClick;
 
 }
 
 function manejadorClick() {
+    let texto = document.getElementById('entrada').value;
+    document.getElementById('salida').innerHTML = separaPalabras(texto);
+}
 
+
+function devuelveCadena() {
+
+}
+
+let palabras = new (Array);
+function separaPalabras(texto, separador = " ") {
+    palabras.push = texto.split(' ');
+    console.log(palabras);
+    return palabras;
 }
