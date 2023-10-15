@@ -1,5 +1,4 @@
 // Tarea DAWC03.01 - Ejercicio 3
-// ejemplo pillado de clase
 // Antonio Costas Salazar
 
 window.onload = principal;
