@@ -25,4 +25,5 @@ document.getElementById('boton').addEventListener('click', function () {
 
     const esUnPalindromo = esPalindromo(entradaTexto);
     salidaTexto.textContent += '\n' + (esUnPalindromo ? 'Es un palíndromo.' : 'No es un palíndromo.');
-});  
+});
+
