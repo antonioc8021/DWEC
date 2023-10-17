@@ -18,5 +18,5 @@ function ordenarPorNombre(a, b) {
 
 
 console.log("Ordena de forma aleatoria: " + arrayNumeros.sort(ordenarAleatorio));
-console.log("Ordena de menor a mayor: " + arrayNumeros.sort(ordenarNumerosMenorAMayor));
-console.log("Ordenar los nombre de manera alfabética: " + arrayAlumnos.sort(ordenarPorNombre));
+// console.log("Ordena de menor a mayor: " + arrayNumeros.sort(ordenarNumerosMenorAMayor));
+// console.log("Ordenar los nombre de manera alfabética: " + arrayAlumnos.sort(ordenarPorNombre));
