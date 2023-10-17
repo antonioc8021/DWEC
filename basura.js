@@ -27,3 +27,4 @@ document.getElementById('boton').addEventListener('click', function () {
     salidaTexto.textContent += '\n' + (esUnPalindromo ? 'Es un palíndromo.' : 'No es un palíndromo.');
 });
 
+console.log(esPalindromo("Arriba la birra"));
