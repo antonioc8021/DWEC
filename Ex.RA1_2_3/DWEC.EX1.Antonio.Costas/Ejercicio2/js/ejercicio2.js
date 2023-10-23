@@ -12,13 +12,15 @@ function principal() {
 }
 
 function manejadorClick() {
+    clearInterval(miIntervalo);
+    document.getElementById("divSalida").innerHTML = "El tiempo se ha parado";
 
 }
 
 function generaSegundo() {
     let numero = Math.random() * (4) + 2;
     numero = Math.round(numero);
-    return numero
+    return numero;
 }
 
 function restarSegundo() {
@@ -32,7 +34,7 @@ function restarSegundo() {
     //         i = generaSegundo();
     //     }
     // }
-    document.getElementById("divSalida").innerHTML = "Vas a tener que esperar: " + segundo + " segundos"
+    document.getElementById("divSalida").innerHTML = "Vas a tener que esperar: " + segundo + " segundos";
 
 }
 
