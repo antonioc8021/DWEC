@@ -8,25 +8,27 @@ function principal() {
 }
 
 function manejadorClick() {
+
     let textoSalida = "Ha introducido ";
     let textoEntrada = document.getElementById("entrada").value;
+    textoEntrada.innerHTML = "";
     if (vacio(textoEntrada)) {
         textoSalida = "No ha escrito nada";
     } else if (esNumero(textoEntrada)) {
         textoSalida = "Ha introducido un número ";
         if ((textoEntrada > 0) && (textoEntrada <= 10)) {
             for (let i = 1; i <= textoEntrada; i++) {
-                textoSalida += `Mensaje: ${i}, `;
+                textoSalida += `<br>Mensaje: ${i}`;
             }
         } else if (textoEntrada > 0) {
             textoSalida += "postivo";
             if (esPrimo(textoEntrada)) {
-                textoSalida += ", además es primo"
+                textoSalida += ", además es primo";
             }
         } else if (textoEntrada < 0) {
             textoSalida += "negativo";
             if (esPrimo(textoEntrada)) {
-                textoSalida += ", además es primo"
+                textoSalida += ", además es primo";
             }
         }
         // todo: tengo que hacer lo de la parte decimal. La parte entera la saco truncando como el otro día con lo de probabilidad
@@ -35,7 +37,7 @@ function manejadorClick() {
         el texto en mayúsculas es: ${textoEntrada.toUpperCase()},
         y en minúsculas es: ${textoEntrada.toLowerCase()}`;
         if (esPalindromo(textoEntrada)) {
-            textoSalida += `, Además de todo esto, es palindromo.`
+            textoSalida += `, Además de todo esto, es palindromo.`;
         }
     }
 
@@ -55,16 +57,6 @@ function esNumero(numero) {
     let res = false;
     if (!isNaN(numero)) {
         res = true;
-    }
-    return res;
-}
-function cuentaAtras(numero) {
-    let res;
-    if ((numero > 0) && (numero <= 10)) {
-        for (let i = 1; i <= numero; i++) {
-            res += `Mensaje: ${i}`;
-            console.log("hola" + i)
-        }
     }
     return res;
 }
