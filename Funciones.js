@@ -92,3 +92,14 @@ function esPrimo(numero) {
     }
     return resultado;
 }
+
+function crearMatriz2D(x, y) {
+    let matrizBase = [];
+    for (let i = 0; i < x; i++) {
+        matrizBase.push([]);
+        for (let j = 0; j < y; j++) {
+            matrizBase[i].push(i + "-" + j);
+        }
+    }
+    return matrizBase;
+}
