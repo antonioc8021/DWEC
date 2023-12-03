@@ -4,35 +4,6 @@ function Electrodomestico(id, modelo, consumo) {
     this._consumo = consumo;
 }
 
-Electrodomestico.prototype = {
-    set id(nuevoId) {
-        nuevoId = nuevoId.toUpperCase();
-        if (this.verificarID(nuevoId)) {
-            this._id = nuevoId;
-        }
-    },
-    get id() {
-        return this._id;
-    },
-    set modelo(nuevoModelo) {
-        nuevoModelo = nuevoModelo.toUpperCase();
-        if (nuevoModelo.length >= 6) {
-            this._modelo = nuevoModelo;
-        }
-    },
-    get modelo() {
-        return this._modelo
-    },
-    set consumo(nuevoConsumo) {
-
-    }
-}
-
-Electrodomestico.prototype.toString = function () {
-    return "ELEC" + this._id + "; " + this._modelo + "; " + this._consumo + ";";
-}
-
-
 Electrodomestico.prototype.verificarID = function (id) {
     let resultado = false;
     if (id.startswith("ELEC - ") && id.length >= 10 && id.length <= 20) {
@@ -48,3 +19,35 @@ Electrodomestico.prototype.calcularConsumo = function (horas) {
     }
     return resultado;
 }
+
+// getters y setters:
+Electrodomestico.prototype.setID = function (id) {
+    if (this.verificarID(id)) {
+        this._id = id.toUpperCase();
+    }
+};
+
+Electrodomestico.prototype.getID = function () {
+    return this._id;
+};
+
+Electrodomestico.prototype.setModelo = function (modelo) {
+    modelo = modelo.toUpperCase();
+    if (modelo.length >= 6) {
+        this._modelo = modelo;
+    }
+};
+
+Electrodomestico.prototype.getModelo = function () {
+    return this._modelo;
+};
+
+Electrodomestico.prototype.setConsumo = function (consumo) {
+    if (Number.isInteger(consumo) && consumo >= 1) {
+        this._consumo = consumo;
+    }
+};
+
+Electrodomestico.prototype.getConsumo = function () {
+    return this._consumo;
+};
