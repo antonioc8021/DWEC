@@ -1,4 +1,4 @@
-function Vehiculo(tipo,marca,modelo,matricula,kilometros) {
+function Vehiculo(tipo, marca, modelo, matricula, kilometros) {
     this._tipo = tipo;
     this._marca = marca;
     this._modelo = modelo;
@@ -7,137 +7,106 @@ function Vehiculo(tipo,marca,modelo,matricula,kilometros) {
 }
 
 Vehiculo.prototype = {
-    set tipo(entrada)
-    {
+    set tipo(entrada) {
         this._tipo = entrada;
     },
-    get tipo()
-    {
+    get tipo() {
         return this._tipo;
     },
-    set marca(entrada)
-    {
+    set marca(entrada) {
         this._marca = entrada;
     },
-    get marca()
-    {
+    get marca() {
         return this._marca;
     },
-    set modelo(entrada)
-    {
+    set modelo(entrada) {
         this._modelo = entrada;
     },
-    get modelo()
-    {
+    get modelo() {
         return this._modelo;
     },
-    set matricula(entrada)
-    {
-        if(this.verificarMatricula(entrada))
-        {
+    set matricula(entrada) {
+        if (this.verificarMatricula(entrada)) {
             this._matricula = entrada;
         }
     },
-    get matricula()
-    {
+    get matricula() {
         return this._matricula;
     },
-    set kilometros(entrada)
-    {
+    set kilometros(entrada) {
         this._kilometros = entrada;
     },
-    get kilometros()
-    {
+    get kilometros() {
         return this._kilometros;
     }
 }
 
-Vehiculo.prototype.toString = function()
-            {
-                return  "Tipo: " + this._tipo + "\n" +
-                        "Marca: " + this._marca + "\n" +
-                        "Modelo: " + this._modelo + "\n" +
-                        "Matrícula" + this._matricula + "\n" +
-                        "km: " + this._kilometros + "\n";
-            };
-Vehiculo.prototype.concatenar = function(separador)
-            {
-                return this._tipo + separador +
-                            this._marca + separador +
-                            this._modelo + separador +
-                            this._matricula + separador +
-                            this._kilometros + separador;
-            };
-Vehiculo.prototype.aumentarKM = function(kilometros)
-            {
-                if(this.verificarNumero(kilometros))
-                {
-                    this._kilometros += kilometros;
-                    return this._kilometros;
-                }
-                else
-                {
-                    return "Kilómetros erróneos";
-                }
-            };
-Vehiculo.prototype.verificarNumero = function(numero)
-                    {
-                        let resultado = false;
-                        if(!isNaN(numero))
-                        {
-                            resultado = true;
-                        }
-                        return resultado;
-                    };
-Vehiculo.prototype.verificarMatricula = function(matricula)
-                    {
-                        let resultado = false;
-                        if(matricula.length === 6 || matricula.length === 7)
-                        {
-                            resultado = true;
-                        }
-                        return resultado;
-                    };
-Vehiculo.prototype.setTipo = function(entrada)
-{
+Vehiculo.prototype.toString = function () {
+    return "Tipo: " + this._tipo + "\n" +
+        "Marca: " + this._marca + "\n" +
+        "Modelo: " + this._modelo + "\n" +
+        "Matrícula" + this._matricula + "\n" +
+        "km: " + this._kilometros + "\n";
+};
+Vehiculo.prototype.concatenar = function (separador) {
+    return this._tipo + separador +
+        this._marca + separador +
+        this._modelo + separador +
+        this._matricula + separador +
+        this._kilometros + separador;
+};
+Vehiculo.prototype.aumentarKM = function (kilometros) {
+    if (this.verificarNumero(kilometros)) {
+        this._kilometros += kilometros;
+        return this._kilometros;
+    }
+    else {
+        return "Kilómetros erróneos";
+    }
+};
+Vehiculo.prototype.verificarNumero = function (numero) {
+    let resultado = false;
+    if (!isNaN(numero)) {
+        resultado = true;
+    }
+    return resultado;
+};
+Vehiculo.prototype.verificarMatricula = function (matricula) {
+    let resultado = false;
+    if (matricula.length === 6 || matricula.length === 7) {
+        resultado = true;
+    }
+    return resultado;
+};
+Vehiculo.prototype.setTipo = function (entrada) {
     this._tipo = entrada;
 };
-Vehiculo.prototype.getTipo = function()
-{
+Vehiculo.prototype.getTipo = function () {
     return this._tipo;
 };
-Vehiculo.prototype.setMarca = function(entrada)
-{
+Vehiculo.prototype.setMarca = function (entrada) {
     this._marca = entrada;
 };
-Vehiculo.prototype.getMarca = function()
-{
+Vehiculo.prototype.getMarca = function () {
     return this._marca;
 };
-Vehiculo.prototype.setModelo = function(entrada)
-{
+Vehiculo.prototype.setModelo = function (entrada) {
     this._modelo = entrada;
 };
-Vehiculo.prototype.getModelo = function()
-{
+Vehiculo.prototype.getModelo = function () {
     return this._modelo;
 };
-Vehiculo.prototype.setMatricula =  function(entrada)
-{
-    if(this.verificarMatricula(entrada))
-    {
+Vehiculo.prototype.setMatricula = function (entrada) {
+    if (this.verificarMatricula(entrada)) {
         this._matricula = entrada;
     }
 };
-Vehiculo.prototype.getMatricula = function()
-{
+Vehiculo.prototype.getMatricula = function () {
     return this._matricula;
 };
-Vehiculo.prototype.setKilometros = function(entrada)
-{
+Vehiculo.prototype.setKilometros = function (entrada) {
     this._kilometros = entrada;
 };
-Vehiculo.prototype.getKilometros = function()
-{
+Vehiculo.prototype.getKilometros = function () {
     return this._kilometros;
 };
