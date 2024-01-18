@@ -5,5 +5,29 @@ function principal() {
 }
 
 function manejadorClick() {
-    document.getElementById("salida").innerHTML = "Has escrito: " + document.getElementById("entrada").value;
+    let valorEntrada = document.getElementById("entrada").value;
+    let coleccionrecientes = JSON.parse(localStorage.getItem("colRecientes"));
+
+    if (coleccionrecientes === null) {
+        coleccionrecientes = {};
+    }
+
+    let contador = 0;
+
+    for (let clave in coleccionrecientes) {
+        contador++;
+    }
+
+    coleccionrecientes["reciente" + contador] = valorEntrada;
+    localStorage.setItem("colRecientes", JSON.stringify(coleccionrecientes));
+    // console.log(coleccionrecientes); 
+
+    // voy a actualizar el datalist del input de entrada
+    let listado = "";
+    for (let clave in coleccionrecientes) {
+        listado += "<option>" + coleccionrecientes[clave] + "</option>";
+    }
+
+
+
 }
