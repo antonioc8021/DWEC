@@ -5,7 +5,7 @@ function principal() {
 }
 
 function manejadorClick() {
-    document.getElementById("salida").innerHTML = "Has escrito: " + document.getElementById("entrada").value;
+    document.getElementById("salida").innerHTML = crearElemento();
 }
 
 function crearElemento(tagNombre, opciones) {
