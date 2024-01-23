@@ -5,28 +5,15 @@ function principal() {
 }
 
 function manejadorClick() {
-    let parrafo = document.createElement('p');
-
-    let contenido = crearElemento('i', document.getElementById("entrada").value);
-    parrafo.appendChild(contenido);
-
-    let color = document.getElementById('inColor').value;
-    parrafo.style.backgroundColor = color;
-
-    contenido.style.fontWeigth = 'bold';
-
-
-    document.getElementById("salida").appendChild(parrafo);
+    document.getElementById("salida").innerHTML = "Has escrito: " + document.getElementById("entrada").value;
 }
 
+
 function crearElemento(etiqueta, texto, atributos) {
-
     let elementoNuevo = document.createElement(etiqueta);
-
     if (texto !== undefined) {
         let contenido = document.createTextNode(texto);
         elementoNuevo.appendChild(contenido);
-
     }
     if (atributos !== undefined) {
         for (let clave in atributos) {
@@ -35,4 +22,3 @@ function crearElemento(etiqueta, texto, atributos) {
     }
     return elementoNuevo;
 }
-
