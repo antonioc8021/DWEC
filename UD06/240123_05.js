@@ -1,11 +1,20 @@
 window.onload = principal;
+let contador = 0;
+
 
 function principal() {
     document.getElementById("miBoton").onclick = manejadorClick;
 }
 
 function manejadorClick() {
-    document.getElementById("salida").innerHTML = "Has escrito: " + document.getElementById("entrada").value;
+
+    let texto = document.getElementById("entrada").value;
+    let color = document.getElementById("inColor").value;
+    let identificador = "parr_" + contador++;
+    let parrafo = crearElemento('p', texto, { "id": identificador });
+    parrafo.style.backgroundColor = color;
+    parrafo.addEventListener("click", manejadorClickParrafo)    // añado el manejador único
+    document.getElementById("salida").appendChild(parrafo);
 }
 
 
@@ -21,4 +30,9 @@ function crearElemento(etiqueta, texto, atributos) {
         }
     }
     return elementoNuevo;
+}
+
+function manejadorClickParrafo(e) {
+    console.log(this.id);
+    document.getElementById(this.id).style.color = color;
 }
