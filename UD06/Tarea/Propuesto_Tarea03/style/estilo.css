@@ -1,0 +1,19 @@
+.grafico {
+    position: relative; /* IE is dumb */
+    width: 500px;
+    border: 1px solid #3366ff;
+    padding: 2px;
+    }
+.grafico .barra {
+    display: block;
+    position: relative;
+    background: #3366ff;
+    text-align: center;
+    color: white;
+    height: 2em;
+    line-height: 2em;
+}
+
+.grafico .barra span {
+    position: absolute; left: 1em;
+}
