@@ -32,3 +32,5 @@ function intercambiarEstilosContenido(celdaOrigen, celdaDestino) {
     celdaDestino.style.cssText = estilosOrigen;
     celdaDestino.innerHTML = contenidoOrigen;
 }
+
+
