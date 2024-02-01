@@ -2,6 +2,7 @@
 window.onload = principal;
 
 function principal() {
+    document.getElementById("cambiaNombre").innerHTML = "Antonio Costas Salazar";
     document.getElementById("btnCambiar").addEventListener("click", intercambiarCeldas);
 }
 

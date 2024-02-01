@@ -2,6 +2,7 @@ window.onload = principal;
 
 function principal() {
     let miFormulario = crearElemento("form", undefined, { "id": "miFormulario" });
+    miFormulario.appendChild(crearElemento("h1", "Antonio Costas Salazar"));
     miFormulario.appendChild(document.createTextNode("ID: "));
     miFormulario.appendChild(crearElemento("input", undefined, {
         "id": "inID",
@@ -11,7 +12,7 @@ function principal() {
     miFormulario.appendChild(crearElemento("br"));
     miFormulario.appendChild(crearElemento("br"));
 
-    miFormulario.appendChild(document.createTextNode("Nombre: "));
+    miFormulario.appendChild(document.createTextNode("Código: "));
     miFormulario.appendChild(crearElemento("input", undefined, {
         "id": "inNombre",
         "type": "text"

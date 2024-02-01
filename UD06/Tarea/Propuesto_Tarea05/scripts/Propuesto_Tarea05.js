@@ -1,3 +1,4 @@
+// Antonio Costas Salazar
 window.onload = principal;
 function principal(e) {
     dibujarFormulario();
@@ -18,31 +19,32 @@ function crearElemento(etiqueta, texto, atributos) {
 }
 
 function dibujarFormulario() {
-    let miformulario = crearElemento("form", undefined, { "id": "miFormulario" });
+    let miFormulario = crearElemento("form", undefined, { "id": "miFormulario" });
+    miFormulario.appendChild(crearElemento("h1", "Antonio Costas Salazar"));
 
-    miformulario.appendChild(document.createTextNode("ID: "));
+    miFormulario.appendChild(document.createTextNode("ID: "));
     let inputID = crearElemento("input", undefined, { "id": "inID", "type": "text" });
     inputID.addEventListener("input", manejadorChangeID);
 
-    miformulario.appendChild(inputID);
+    miFormulario.appendChild(inputID);
 
-    miformulario.appendChild(document.createTextNode("Nombre: "));
+    miFormulario.appendChild(document.createTextNode("Nombre: "));
     inputNombre = crearElemento("input", undefined, { "id": "inNombre", "type": "text" });
     inputNombre.addEventListener("input", manejadorChangeNombre);
 
-    miformulario.appendChild(inputNombre);
+    miFormulario.appendChild(inputNombre);
 
     botonGuardar = crearElemento("input", undefined, { "id": "btnGuardar", "type": "button", "value": "Guardar" });
     botonGuardar.addEventListener("click", manejadorClickGuardar);
 
-    miformulario.appendChild(botonGuardar);
+    miFormulario.appendChild(botonGuardar);
 
     botonCargar = crearElemento("input", undefined, { "id": "btnCargar", "type": "button", "value": "Cargar" });
     botonCargar.addEventListener("click", manejadorClickCargar);
 
-    miformulario.appendChild(botonCargar);
+    miFormulario.appendChild(botonCargar);
 
-    document.body.appendChild(miformulario);
+    document.body.appendChild(miFormulario);
 
     document.body.appendChild(crearElemento("div", undefined, { "id": "salida" }));
 }
