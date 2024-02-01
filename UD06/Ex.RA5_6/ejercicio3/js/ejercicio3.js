@@ -5,33 +5,18 @@ function principal() {
     let miFormulario = crearElemento("form", undefined, { "id": "miFormulario" });
     miFormulario.appendChild(crearElemento("h1", "Antonio Costas Salazar"));
     miFormulario.appendChild(document.createTextNode("Codigo: "));
-    miFormulario.appendChild(crearElemento("input", undefined, {
-        "id": "inCodigo",
-        "type": "text"
-    }));
+    miFormulario.appendChild(crearElemento("input", undefined, { "id": "inCodigo", "type": "text" }));
 
-    miFormulario.appendChild(crearElemento("br"));
-    miFormulario.appendChild(crearElemento("br"));
+    miFormulario.appendChild(document.createTextNode(" Cantidad: "));
+    miFormulario.appendChild(crearElemento("input", undefined, { "id": "inCantidad", "type": "number" }));
 
-    miFormulario.appendChild(document.createTextNode("Cantidad: "));
-    miFormulario.appendChild(crearElemento("input", undefined, {
-        "id": "inCantidad",
-        "type": "number"
-    }));
+    // se que no es la mejor forma de hacerlo pero así dejo algo de espacio y no esté todo amontonado
+    miFormulario.appendChild(document.createTextNode(" "));
+    miFormulario.appendChild(crearElemento("input", undefined, { "id": "btnGuardar", "type": "button", "value": "Guardar" }));
 
-    miFormulario.appendChild(crearElemento("br"));
-    miFormulario.appendChild(crearElemento("br"));
-    miFormulario.appendChild(crearElemento("input", undefined, {
-        "id": "btnGuardar",
-        "type": "button", "value": "Guardar"
-    }));
+    miFormulario.appendChild(document.createTextNode(" "));
+    miFormulario.appendChild(crearElemento("input", undefined, { "id": "btnCargar", "type": "button", "value": "Cargar" }));
 
-    miFormulario.appendChild(crearElemento("br"));
-    miFormulario.appendChild(crearElemento("br"));
-    miFormulario.appendChild(crearElemento("input", undefined, {
-        "id": "btnCargar",
-        "type": "button", "value": "Cargar"
-    }));
     miFormulario.appendChild(crearElemento("br"));
     miFormulario.appendChild(crearElemento("br"));
     miFormulario.appendChild(crearElemento("div", undefined, { "id": "salida" }));
@@ -41,22 +26,6 @@ function principal() {
     document.getElementById("inCantidad").addEventListener("change", cambiaCantidad);
     document.getElementById("btnGuardar").addEventListener("click", guardar);
     document.getElementById("btnCargar").addEventListener("click", cargar);
-}
-
-function cargar() {
-    let salida = "";
-    for (let i = 0; i < sessionStorage.length; i++) {
-        salida += sessionStorage.key(i) + ": " + sessionStorage.getItem(sessionStorage.key(i)) + "<br>";
-    }
-    document.getElementById("salida").innerHTML = salida;
-}
-
-function guardar() {
-    let id = document.getElementById("inCodigo").value;
-    let nombre = document.getElementById("inCantidad").value;
-    if (checkCodigo(id) && checkCantidad(nombre)) {
-        sessionStorage.setItem(id, nombre);
-    }
 }
 
 function cambiaCodigo(e) {
@@ -94,9 +63,29 @@ function crearElemento(etiqueta, texto, atributos) {
         elementoNuevo.appendChild(contenido);
     }
     if (atributos !== undefined) {
-        for (let clave in atributos) {
-            elementoNuevo.setAttribute(clave, atributos[clave]);
+        for (let codigo in atributos) {
+            elementoNuevo.setAttribute(codigo, atributos[codigo]);
         }
     }
     return elementoNuevo;
+}
+
+function cargar() {
+    let salida = "<table> ";
+    for (let i = 0; i < sessionStorage.length; i++) {
+        let codigo = sessionStorage.key(i);
+        let cantidad = sessionStorage.getItem(codigo);
+        salida += "<tr><td>" + codigo + ":</td>  <td>" + cantidad + "</td></tr><br>";
+    }
+    salida += "</table>";
+    document.getElementById("salida").innerHTML = salida;
+}
+
+
+function guardar() {
+    let id = document.getElementById("inCodigo").value;
+    let nombre = document.getElementById("inCantidad").value;
+    if (checkCodigo(id) && checkCantidad(nombre)) {
+        sessionStorage.setItem(id, nombre);
+    }
 }
