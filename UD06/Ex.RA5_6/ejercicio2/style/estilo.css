@@ -1,0 +1,105 @@
+#div_white {
+    float: left;
+    height: 120px;
+    width: 300px;
+    border: solid 1px black;
+    background-color: white;
+    margin: 5px;
+    font-size: 100%;
+}
+
+#div_yellow {
+    float: right;
+    height: 80px;
+    width: 100px;
+    border: solid 1px black;
+    background-color: yellow;
+    margin: 5px;
+}
+
+#div_purple {
+    float: left;
+    height: 50px;
+    width: 120px;
+    border: solid 1px black;
+    background-color: purple;
+    margin: 5px;
+    color: white;
+}
+
+#div_black {
+    float: right;
+    height: 80px;
+    width: 100px;
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    margin: 5px;
+}
+
+#div_red {
+    float: right;
+    height: 80px;
+    width: 70px;
+    border: solid 1px black;
+    background-color: red;
+    margin: 5px;
+}
+
+/* #divCuentaBlanco {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: solid 1px black;
+    background-color: white;
+    margin: 5px;
+    font-size: 100%;
+}
+
+#divCuentaAmarillo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: solid 1px black;
+    background-color: yellow;
+    margin: 5px;
+    font-size: 100%;
+}
+
+#divCuentaPurpura {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: solid 1px black;
+    background-color: purple;
+    margin: 5px;
+    font-size: 100%;
+    color: white;
+}
+
+#divCuentaNegro {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: solid 1px black;
+    background-color: black;
+    margin: 5px;
+    font-size: 100%;
+    color: white;
+}
+
+#divCuentaRojo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    border: solid 1px black;
+    background-color: red;
+    margin: 5px;
+    font-size: 100%;
+} */
+
+legend {
+    font-size: 115%;
+    color: lightseagreen;
+    font-weight: bold;
+}

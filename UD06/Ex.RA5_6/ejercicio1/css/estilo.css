@@ -1,0 +1,19 @@
+table, td {
+    border: solid 1px black;
+    padding: 2px;
+    text-align: center;
+}
+
+td {
+    width: 200px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2980B9;
+}
+
+#cambiaNombre {
+    color: #2980B9;
+    font-weight: bold;
+}
