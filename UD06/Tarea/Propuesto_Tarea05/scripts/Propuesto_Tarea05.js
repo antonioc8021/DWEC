@@ -92,12 +92,10 @@ function manejadorClickGuardar(e) {
 
 function manejadorClickCargar(e) {
     let txt = ""
-    console.log("puta");
     console.log(sessionStorage.length);
     for (let i = 0; i < sessionStorage.length; i++) {
         txt += "Objeto " + (i + 1) + ":<br>";
         txt += "{";
-        console.log("putita");
         let claveSesion = sessionStorage.key(i);
         console.log(claveSesion);
         let valorSesion = sessionStorage.getItem(claveSesion);
